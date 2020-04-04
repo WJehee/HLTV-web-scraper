@@ -1,7 +1,7 @@
 import bs4 as bs
 import requests
 import sqlite3
-
+import sys
 
 class Match:
     def __init__(self,  link):
@@ -81,11 +81,12 @@ def create_table():
     conn.close()
 
 
-def main():
+def scrape(nPages: int):
     conn = sqlite3.connect('games.db')
     c = conn.cursor()
 
-    for x in range(2):
+
+    for x in range(nPages):
         x *= 100
         for link in get_links(x):
             link = Match(link)
@@ -100,5 +101,9 @@ def main():
 
 
 if __name__ == '__main__':
-    # create_table()
-    main()
+    nPages = int(sys.argv[1])
+    main(nPages)
+
+
+
+
