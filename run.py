@@ -102,7 +102,7 @@ def scrape(nPages: int):
 
 if __name__ == '__main__':
     nPages = int(sys.argv[1])
-    main(nPages)
+    scrape(nPages)
 
 
 
