@@ -51,7 +51,7 @@ class ResultScraper(scrapy.Spider):
         yield {
             "map_name": map_name,
             "winner": winner,
-            "winner_score": winner_score,
             "loser": loser,
+            "winner_score": winner_score,
             "loser_score": loser_score,
         }
