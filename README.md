@@ -1,3 +1,3 @@
 # Web Scraper hltv
 
-A simple web scraper that parses hltv.org for recently played CSGO matches and puts the results of the match inside an sqlite database.
+A web scraper for https://hltv.org
